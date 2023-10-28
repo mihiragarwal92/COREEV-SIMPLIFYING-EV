@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+  <meta charset="UTF-8">
+  <title>Navigator</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no" />
+
+  <link rel="stylesheet" type="text/css" href="https://api.tomtom.com/maps-sdk-for-web/cdn/5.x/5.36.1/maps/maps.css">
+  <script src="https://api.tomtom.com/maps-sdk-for-web/cdn/5.x/5.36.1/maps/maps-web.min.js"></script>
+  <script src="https://api.tomtom.com/maps-sdk-for-web/cdn/5.x/5.36.1/services/services-web.min.js"></script>
+  <script src="chargingAvailability.js"></script>
+
+  <header>
+    <header class="header-style1 menu_area-light">
+
+      <div class="navbar-default border-bottom border-color-light-white">
+
+          <!-- start top search -->
+          <div class="top-search bg-primary">
+              <div class="container-fluid px-lg-1-6 px-xl-2-5 px-xxl-2-9">
+                  <form class="search-form" action="https://coreev.websitelayout.net/search.html" method="GET" accept-charset="utf-8">
+                      <div class="input-group">
+                          <span class="input-group-addon cursor-pointer">
+                              <button class="search-form_submit fas fa-search text-white" type="submit"></button>
+                          </span>
+                          <input type="text" class="search-form_input form-control" name="s" autocomplete="off" placeholder="Type & hit enter...">
+                          <span class="input-group-addon close-search mt-1"><i class="fas fa-times"></i></span>
+                      </div>
+                  </form>
+              </div>
+          </div>
+          <!-- end top search -->
+
+          <div class="container-fluid px-lg-1-6 px-xl-2-5 px-xxl-2-9">
+              <div class="row align-items-center">
+                  <div class="col-12 col-lg-12">
+                      <div class="menu_area alt-font">
+                          <nav class="navbar navbar-expand-lg navbar-light p-0">
+                              <div class="navbar-header navbar-header-custom">
+                                  <!-- start logo -->
+                                  <a href="index.html" class="navbar-brand"><img id="logo" src="img/logos/logo-inner.png" alt="logo"></a>
+                                  <!-- end logo -->
+                              </div>
+
+                              <div class="navbar-toggler"></div>
+
+                              <!-- start menu area -->
+                              <ul class="navbar-nav ms-auto" id="nav" style="display: none;">
+                                  <li><a href="index.html">Home</a></li>
+                                  <li>
+                                      <a href="./etrio.in/index.htm">Sustainable Cargo Solutions</a>
+                                      <ul>
+                                          <li><a href="./etrio.in/index.htm#bottom">Electric Cargos</a></li>
+                                          <li><a href="./etrio.in/index.htm#bottom">Rental Cargos</a></li>
+                                  
+                                          
+                                          
+                                      </ul>
+                                  </li>
+                                  <li>
+                                      <a href="#!">Latest</a>
+                                      <ul>
+                                          <li><a href="tips&tricks.html">Tips & Tricks</a></li>
+                                          <li><a href="news&facts.html">News & Facts </a></li>
+                                      </ul>
+                                  </li>
+                                  
+                                  <li>
+                                      <a href="contact.html">Contact Us</a>
+                                     
+                                  </li>
+                                  <li>
+                                      <a href="privacy-policy.html">Privacy Policy</a>
+                                     
+                                  </li>
+
+                                  <li>
+                                      <a href="faq.html">FAQ</a>
+                                  
+                                  </li>
+                                 
+                                  <li><a href="ourapp.html">Our App</a></li>
+                              </ul>
+                              <!-- end menu area -->
+
+                              <!-- start attribute navigation -->
+                              <div class="attr-nav align-items-xl-center ms-xl-auto main-font">
+                                  <ul>
+                                      <li class="search"><a href="#!"><i class="fas fa-search"></i></a></li>
+                                      <li class="d-none d-xl-inline-block"><a href="contact.html" class="btn-style1 medium primary">Sign IN/UP</a></li>
+                                  </ul>
+                              </div>
+                              <!-- end attribute navigation -->
+                          </nav>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </header>
+  </header>
+
+  <style>
+    * {
+      margin: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      max-height: 100%;
+      font-family: "Inter", sans-serif;
+      font-size: 18px;
+      background-color: #ffffff;
+      place-items: center;
+    }
+
+    body::-webkit-scrollbar {
+      /* Hide scrollbar for Chrome, Safari and Opera */
+      display: none;
+    }
+
+    body {
+      -ms-overflow-style: none;
+      /* IE and Edge */
+      scrollbar-width: none;
+      box-shadow: 0 8px 32px 0 rgba(17, 17, 17, 0.952);
+      /* Firefox */
+    }
+
+    nav,
+    header,
+    .nav_links,
+    li {
+      background-color: #000000;
+    }
+
+    .logo {
+      width: auto;
+      height: 50px;
+      background-color: inherit;
+      cursor: pointer;
+      margin-right: auto;
+    }
+
+    li,
+    a {
+      font-family: "Montserrat", sans-serif;
+      font-family: 400;
+      font-size: 16px;
+      color: #ededed;
+      text-decoration: none;
+    }
+
+    header {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      padding: 10px 10%;
+    }
+
+    .nav_links {
+      list-style: none;
+      margin-top: 10px;
+    }
+
+    .nav_links li {
+      display: inline-block;
+      padding: 10px 20px;
+    }
+
+    .nav_links li a {
+      transition: all 0.3s ease 0s;
+    }
+
+    .nav_links li a:hover {
+      color: #22d12b;
+      text-decoration: underline;
+    }
+
+    #row:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+
+    #leftcolumn {
+      float: left;
+      width: 50%;
+      padding: 10px 10%;
+      box-shadow: 0 8px 32px 0 rgb(0, 0, 0);
+    }
+
+    #rightcolumn {
+      float: left;
+      width: 50%;
+      padding: 20px 0 10px 0;
+      box-shadow: 0 8px 32px 0 rgba(12, 45, 212, 0.863);
+    }
+
+    @media screen and (max-width: 850px) {
+
+      #leftcolumn,
+      #rightcolumn {
+        float: none;
+        width: 100%;
+        padding: 0;
+      }
+    }
+
+    #source_div,
+    #destination_div {
+      margin-top: 20px;
+    }
+
+    select {
+      width: 320px;
+      height: 48px;
+      padding: 0 4em 0 1em;
+      box-shadow: 0 0 1em 0 rgba(0, 0, 0, 0.2);
+      font-size: 16px;
+      /* not working */
+      padding: 2px;
+      color: #ededed;
+      border: 0;
+      appearance: none;
+      font: inherit;
+      background: url(https://upload.wikimedia.org/wikipedia/commons/9/9d/Caret_down_font_awesome_whitevariation.svg) no-repeat right 0.8em center / 1.4em,
+        linear-gradient(to left, rgba(255, 255, 255, 0.3) 3em, rgba(255, 255, 255, 0.2) 3em);
+      ;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    option {
+      color: inherit;
+      background-color: #282828;
+      text-align: center;
+    }
+
+    .btn {
+      margin-left: 45px;
+      margin-bottom: 10px;
+      padding-left: 50px;
+      border-radius: 1rem;
+      font-size: 16px;
+      font-weight: 500;
+      padding: 1.0em 2em;
+      border: transparent;
+      color: #F9F8F9;
+      background: linear-gradient(134deg, #6af06a 0%, #0e5a0e 99%);
+    }
+
+    .btn:hover {
+      cursor: pointer;
+      filter: brightness(110%);
+      transform: scale(1.05);
+    }
+
+    #routeDisplay,
+    #stationDisplay,
+    #distanceDisplay {
+      margin-top: 10px;
+      color: #ededed;
+    }
+
+    #timeDisplay {
+      margin-bottom: 20px;
+      color: #ededed;
+    }
+
+    #map {
+      height: 700px;
+      max-width: 90%;
+      box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.863);
+      border-radius: 60px;
+      border: transparent;
+      margin: auto;
+      margin-top: 10px;
+    }
+
+    #distance {
+      width: 200px;
+      height: 40px;
+      padding: 1px 70px;
+      margin: 3px;
+      border: 1px solid #534a4a;
+      border-radius: 5px;
+      background-color: #f0f0f0;
+    }
+
+    #location{
+      width: 200px;
+      height: 40px;
+      padding: 1px 70px;
+      margin: 6px;
+      border: 1px solid #534a4a;
+      border-radius: 5px;
+      background-color: #ffffff;
+      text-align: left;
+    }
+
+    .loc{
+      margin: 50px;
+      width: 200px;
+      height: 40px;
+      color:#000000;
+      border-radius: 5px;
+      background-color: #F9F8F9;
+      padding: 1px;
+      padding-left: 30px;
+      padding-right: 30px;
+      padding-bottom: 5px;
+      padding-top: 5px;
+      background: linear-gradient( #0e5a0e 99%);
+    }
+  </style>
+</head>
+
+<body>
+  <div id="left">
+    <div id="controls">
+      <label for="location" class="loc"> Location </label>
+      <input class="text" id="location" type="text" />
+      <br>
+      <label for="max_dist" class="loc">Distance</label>
+      <input class="text" id="distance" type="text"/>
+      <br />
+      <input type="button" class="btn" value="Find Stations" onclick="findLocation()" />
+    </div>
+    <hr>
+    <div id="right">
+      <div id="map" class="map"></div>
+    </div>
+
+
+    <script src="ev_search.js"></script>
+</body>
+
+</html>
